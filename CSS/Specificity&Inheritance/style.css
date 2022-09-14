@@ -1,0 +1,20 @@
+h1{
+    color:red;
+}
+
+.top-heading{
+    color: aqua;
+}
+
+#heading{
+    color: green;
+}
+
+section{
+    color:red;
+    border: 3px solid black;
+}
+
+section ul li{
+    border:inherit;
+}

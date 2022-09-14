@@ -1,0 +1,37 @@
+div{
+    width: 150px;
+    height: 150px;
+    border: 3px solid black;
+    display: inline-block;
+}
+
+#static #middle{
+    position: static; /*when the position is static offset won't work*/
+    top:20px;
+    left:40px;
+    right: 60px;
+    bottom: 200px;
+}
+
+
+#relative #middle{
+    position: relative;
+    top:30px;
+    left:40px;
+}
+
+#absolute{
+    position: relative;
+    /* border: 5px solid black; */
+}
+
+#absolute #middle{
+    position: absolute;
+    top:40px;
+    left:20px;
+}
+
+#fixed #middle{
+    position: fixed;
+    top:10px;
+}

@@ -1,0 +1,33 @@
+section{
+    background-color: orange;
+    border: 3px solid black;
+    height: 60vh;
+    width: 40vw;
+}
+
+section:nth-of-type(2){
+
+    background-color: lightblue;
+    border: 3px solid black;
+    height: 70vh;
+    width: 50vw;
+
+}
+
+section div{
+    background-color: beige;
+    height: 40%;
+    width: 60%;
+}
+
+html{
+    font-size: 10px;
+}
+
+article{
+    font-size: 20px;
+}
+
+ul{
+    font-size: 2rem;
+}

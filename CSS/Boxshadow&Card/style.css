@@ -1,0 +1,50 @@
+
+#container{
+    width: 90vw;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.product{
+    width: 320px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.26);
+    transition: 300ms;
+}
+
+.product img{
+    width: 100%;
+}
+
+.product h3{
+    font-weight: normal;
+    font-size: 1.6rem;
+}
+
+.product h3 span{
+    color: red;
+    float: right;
+}
+
+.product button{
+    padding: 8px 15px;
+    background-color: rgb(7, 33, 49);
+    color: white;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: none;
+}
+
+.product button:hover{
+    cursor: pointer;
+}
+
+.product:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}

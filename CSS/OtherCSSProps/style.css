@@ -1,0 +1,16 @@
+section{
+    height: 70vh;
+    width: 60vw;
+    border: 2px solid black;
+    margin: 50px auto;
+    overflow: scroll;
+}
+
+ul li{
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 80%;
+    padding: 20px;
+    margin: 5px auto;
+}
+

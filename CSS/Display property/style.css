@@ -1,0 +1,41 @@
+h1{
+    border: 3px solid black;
+    background-color: blanchedalmond;
+    display: inline;
+    /* height: 40px;
+    width: 30px; */
+    /* padding:40px;
+    margin: 30px; */
+
+}
+
+span{
+    border: 3px solid black;
+    background-color: lightcoral;
+    display: block;
+margin: 40px;
+padding: 30px;
+height: 20px;
+width:200px;
+}
+
+div{
+    display: inline-block;
+    margin: 40px;
+padding: 30px;
+height: 20px;
+width:200px;
+border: 2px solid black;
+background-color: lightblue;
+overflow: auto;
+}
+div:nth-of-type(2){
+    text-align: center;
+  
+
+}
+
+/* div:nth-of-type(3){
+    display: none;
+} */
+

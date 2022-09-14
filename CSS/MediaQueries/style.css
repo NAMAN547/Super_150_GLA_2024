@@ -1,0 +1,55 @@
+section{
+    padding: 1rem;
+    width: 80vw;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+}
+
+h1{
+    font-size: 5rem;
+    text-align: center;
+}
+/* 
+@media screen and (max-width:750px){
+    h1{
+        font-size: 3.5rem;
+        color: red;
+    }
+}
+
+ @media screen and (max-width:520px) {
+    h1{
+        font-size: 2rem;
+        color: blue;
+    }
+    section{
+        background-color: lightblue;
+    }
+}
+@media screen and (orientation:portrait){
+    section{
+        background-color: lightgreen;
+    }
+    section p{
+        text-transform: uppercase;
+    }
+} */
+@media screen and (orientation:landscape){
+    h1{
+        background-color: purple;
+        color: white;
+    }
+    section p{
+        text-transform: uppercase;
+    }
+} 
+
+
+@media screen and (max-width:720px),(orientation:landscape){
+    section{
+        background-color: lightskyblue;
+    }
+    h1{
+        color: lightcoral;
+    }
+} 
