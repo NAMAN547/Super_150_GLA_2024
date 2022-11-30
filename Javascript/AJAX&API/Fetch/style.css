@@ -1,0 +1,9 @@
+*{
+    font-family: sans-serif;
+}
+
+li{
+    border: 1px solid black;
+    margin: 10px 0;
+    padding: 5px;
+}

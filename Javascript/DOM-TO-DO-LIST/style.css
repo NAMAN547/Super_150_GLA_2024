@@ -1,0 +1,79 @@
+
+:root{
+
+    --clr-body-bg: hsl(0 0% 90%);
+    --clr-heading: hsl(0 0% 25%);
+  }
+  
+  body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    font-size: 1.2rem;
+    background: var(--clr-body-bg);
+  }
+
+  .color-picker > fieldset {
+    border: 0;
+    display: flex;
+    gap: 2rem;
+    width: fit-content;
+    background: #fff;
+    padding: 1rem 3rem;
+    margin-inline: auto;
+    border-radius: 0 0 1rem 1rem;
+  }
+  
+  input[type="radio"] {
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+   
+    outline: 3px solid var(--radio-color, currentColor);
+    outline-offset: 3px;
+    border-radius: 50%;
+  }
+  
+ input[type="radio"]:checked {
+    background-color: var(--radio-color);
+  }
+
+
+  #light {
+    --radio-color: gray;
+  }
+ #pink {
+    --radio-color: pink;
+  }
+ #blue {
+    --radio-color: blue;
+  }
+  #green {
+    --radio-color: green;
+  }
+ #dark {
+    --radio-color: #232323;
+  }
+
+
+
+
+  :root:has(#pink:checked) {
+    --clr-body-bg: hsl(310 50% 90%);
+    --clr-heading: hsl(310 50% 25%);
+  }
+  
+  :root:has(#blue:checked) {
+    --clr-body-bg: hsl(209 50% 90%);
+    --clr-heading: hsl(209 50% 25%);
+  }
+  
+  :root:has(#green:checked) {
+    --clr-body-bg: hsl(109 50% 90%);
+    --clr-heading: hsl(109 50% 25%);
+  }
+  
+  :root:has(#dark:checked) {
+    --clr-body-bg: hsl(209 50% 10%);
+    --clr-heading: hsl(209 50% 80%);
+  }
+  
