@@ -102,3 +102,23 @@ async function main() {
 main();
 
 
+
+
+let p1 = fs.promises.readFile("q1.html","utf-8").then(function(data){
+    console.log("p1 completed");
+    return data;
+});
+let p2 = fs.promises.readFile("q2.html","utf-8").then(function(data){
+    console.log("p2 completed");
+    return data;
+});
+
+let combinedPromise = Promise.all([p1,p2]);
+
+combinedPromise.then(function(data){
+    // console.log(data);
+}).catch(function(err){
+    console.log(err);
+})
+
+
