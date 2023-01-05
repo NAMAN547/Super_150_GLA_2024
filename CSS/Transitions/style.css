@@ -40,9 +40,9 @@ section:hover span{
     height: 200px;
     transition-duration: 2s;
     transition-property: width;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+     /* display: flex; */
+    /* justify-content: center;
+    align-items: center;  */
     
   }
   
