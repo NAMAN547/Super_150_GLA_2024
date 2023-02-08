@@ -8,23 +8,23 @@
 </head>
 <body>
 
-    <h1>Add New Comment</h1>
+    <h1>Edit Comment</h1>
 
-    <form action="/comments" method="post">
+    <form action="/comments/<%= comment.id %>/?_method=PATCH" method="post">
         <div>
             <label for="user">Username: </label>
             <input type="text" name="user" id="user"
-            placeholder="Username">
+            placeholder="Username" value="<%= comment.user %>">
         </div>
         <br>
         <div>
             <label for="text">Comment Text:</label>
             <br>
             <br>
-            <textarea name="text" id="text" cols="30" rows="5" placeholder="enter comment here..."></textarea>
+            <textarea name="text" id="text" cols="30" rows="5" placeholder="enter comment here..."> <%= comment.text %></textarea>
         </div>
         <br>
-        <button>Create Comment</button>
+        <button>Save Comment</button>
     </form>
 
 

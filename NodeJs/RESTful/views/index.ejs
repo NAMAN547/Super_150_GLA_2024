@@ -16,6 +16,10 @@
         <%for(const comment of comments){%>
             <li> 
                 <strong><%= comment.user %></strong> : <%=comment.text %> 
+
+                <form action="/comments/<%= comment.id %>/?_method=DELETE" method="post">
+                    <button> Delete</button>
+                </form>
             </li>
            
         <%}%>
