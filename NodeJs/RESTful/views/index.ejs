@@ -16,8 +16,11 @@
         <%for(const comment of comments){%>
             <li> 
                 <strong><%= comment.user %></strong> : <%=comment.text %> 
+                
+                &nbsp;&nbsp;<a href="/comments/<%=comment.id%>">Show</a> &nbsp;
+                <a href="/comments/<%=comment.id%>/edit">Edit</a>
 
-                <form action="/comments/<%= comment.id %>/?_method=DELETE" method="post">
+                <form action="/comments/<%= comment.id %>?_method=DELETE" method="post">
                     <button> Delete</button>
                 </form>
             </li>
