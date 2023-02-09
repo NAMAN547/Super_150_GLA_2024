@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const methodOverride = require("method-override");
+const { v4: uuid } = require('uuid');
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -14,17 +15,17 @@ app.use(methodOverride('_method'))
 let comments = [
 
     {
-        id: 0,
+        id: uuid(),
         user:"john",
         text:"this is john's comment"
     },
     {
-        id: 1,
+        id: uuid(),
         user:"harry",
         text:"this is harry's comment"
     },
     {
-        id: 2,
+        id: uuid(),
         user:"ron",
         text:"this is ron's comment"
     },
@@ -43,42 +44,46 @@ app.get('/comments/new', (req, res) => {
     res.render('new');
 });
 
+// Create new comment
+
 app.post('/comments', (req,res)=>{
 
     const {user , text} = req.body;
 
-    comments.push({id:comments.length, user, text});
+    comments.push({id:uuid(), user, text});
 
     res.redirect('/comments');
 
 })
 
+
+// Show one comment
 app.get('/comments/:commentid', (req,res)=>{
 
     const {commentid} = req.params;
 
-   const comment =  comments.find((comment)=> comment.id===parseInt(commentid))
+   const comment =  comments.find((comment)=> comment.id===(commentid))
     res.render('show', {comment})
 
 })
 
-
+// Get edit form prefilled with the data
 app.get('/comments/:commentid/edit',(req,res)=>{
 
     const {commentid} = req.params;
 
-     const comment = comments.find((comment)=> comment.id === parseInt(commentid))
+     const comment = comments.find((comment)=> comment.id === (commentid))
 
     res.render('edit', {comment})
 
 })
 
-
+// Update the commnet with given commentid
 app.patch('/comments/:commentid',(req,res)=>{
 
     const {commentid} = req.params;
 
-    const comment = comments.find((comment)=> comment.id === parseInt(commentid));
+    const comment = comments.find((comment)=> comment.id === (commentid));
 
     comment.user = req.body.user;
     comment.text = req.body.text;
@@ -87,19 +92,17 @@ app.patch('/comments/:commentid',(req,res)=>{
 
 })
 
+
+// Delete a comment
 app.delete('/comments/:commentid', (req,res)=>{
 
     const {commentid} = req.params;
 
-     comments = comments.filter((comment)=> comment.id != parseInt(commentid));
+     comments = comments.filter((comment)=> comment.id != (commentid));
 
     res.render('index', {comments})
 
 })
-
-
-
-
 
 
 app.listen(3000,()=>{
