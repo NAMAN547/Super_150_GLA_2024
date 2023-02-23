@@ -3,6 +3,7 @@ const app = express();
 const path = require("path");
 const mongoose = require("mongoose");
 const Serie = require("./models/Serie")
+app.use(express.json())
 
 mongoose.connect("mongodb://127.0.0.1:27017/seriesDB")
 .then(()=> console.log("DB CONNECTED!"))
@@ -24,10 +25,8 @@ app.get("/search", async(req,res)=>{
     const {q} =  req.query;
 
        const series = await Serie.find({ name: { $regex : `^${q}`}});
-
-       console.log(series)
       
-      res.status(200).json(series)
+       res.status(200).json(series);
 
 })
 
