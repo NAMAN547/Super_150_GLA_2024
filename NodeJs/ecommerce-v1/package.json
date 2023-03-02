@@ -1,0 +1,17 @@
+{
+  "name": "ecommerce-v1",
+  "version": "1.0.0",
+  "description": "Ecommerce app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Naman Tyagi",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "ejs-mate": "^4.0.0",
+    "express": "^4.18.2",
+    "mongoose": "^6.10.0"
+  }
+}
