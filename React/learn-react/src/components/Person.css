@@ -1,0 +1,15 @@
+.person{
+
+
+    width: fit-content;
+    border:1px solid black;
+    margin: 100px auto;
+    font-size: 24px;
+    background-color: azure;
+    box-shadow: 2px 5px 5px rgb(121, 118, 118) ;
+
+
+
+
+
+}

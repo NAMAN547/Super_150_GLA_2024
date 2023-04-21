@@ -1,0 +1,74 @@
+
+
+views => product => views
+
+
+
+ creating a relationship between documents
+
+
+ {
+
+    name: "john",
+    age: 24,
+    job: "software engineer",
+    hobbies: {
+
+
+    },
+
+    review: ["1", "2", "3",]
+
+ }
+
+
+[
+ {
+
+    id: "1",
+    rating: " some rating present",
+    review: "some description added"
+
+ },
+
+  {
+
+    id: "2",
+    rating: " some rating present",
+    review: "some description added"
+
+ }.
+  {
+
+    id: "3",
+    rating: " some rating present",
+    review: "some description added"
+
+ }
+]
+
+
+ //////   1:1 , 1: N , N : N   relationship
+
+  user =>  record
+
+  country => prime minister
+
+  single tweet => multiple comments
+
+
+  tasks =>  person => tasks => frontend
+
+
+  1:N relation
+
+
+
+
+
+
+
+
+
+
+

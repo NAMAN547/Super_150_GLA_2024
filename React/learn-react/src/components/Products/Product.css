@@ -1,0 +1,12 @@
+.product{
+
+    display:inline-block;
+
+    min-height: 250px;
+}
+
+.product > img{
+
+    width: 100px;
+    height: 150px;
+}

@@ -1,23 +1,23 @@
+
 const mongoose = require("mongoose");
-mongoose.connect('mongodb://127.0.0.1:27017/seriesDB')
+mongoose.connect('mongodb://127.0.0.1:27017/spidermanDB')
 .then(()=> console.log("connection open"))
 .catch((err)=> console.log("connection failed",err));
 
 
 
-const seriesSchema = new mongoose.Schema({
+ const seriesSchema = new mongoose.Schema({
 
     name: {
 
         type: String,
-        required: [true, " name is not entered"]
-
+         required: [true, " name is not entered"]
     },
-    date: Number,
-    ratings:Number,
-    isWatched: Boolean
+     date: Number,
+     ratings:Number,
+     isWatched: Boolean
 
-})
+ })
 
    // Technically models is a js class
 

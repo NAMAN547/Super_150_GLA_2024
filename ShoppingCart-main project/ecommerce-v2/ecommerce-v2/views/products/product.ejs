@@ -1,0 +1,49 @@
+<% layout('./layout/boilerplate') -%>
+
+<div class="container">
+
+        <div class="row">
+
+            <% for(const product of products) { %>
+
+                <div class="card col-3 mx-auto mt-4" style="width: 18rem;">
+
+                    <img src="<%= product.img  %>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title"> <%= product.name %> </h5>
+                      
+                      <p class="card-text"> <%= product.desc %></p>
+
+                      <h5 class="card-title">$ : <%= product.price %> </h5>
+
+                      <a href="/products/<%=product._id %>" class="btn btn-primary"> Show </a>
+
+                      <a href="/products/<%=product._id %>/edit" class="btn btn-primary"> Update </a>
+
+                      <form method="post"  action="/products/<%=product._id %>?_method=DELETE">
+
+
+
+                      </form>
+
+
+
+
+
+
+
+                    </div>
+                 
+            
+                    </div>
+
+                    <% } %>
+            
+                </div>
+
+            </div>
+
+                  
+
+  
+
